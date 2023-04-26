@@ -5,6 +5,7 @@ import { useAppStore, useAuthStore, useChatStore, useUserStore } from '@/store/m
 import { isAdmin } from '@/utils/jwt'
 
 const Setting = defineAsyncComponent(() => import('@/components/common/Setting/index.vue'))
+const Contact = defineAsyncComponent(() => import('@/components/common/Setting/Contact.vue'))
 
 const authStore = useAuthStore()
 const userStore = useUserStore()
@@ -36,6 +37,11 @@ function openAdminPanel() {
     <div class="flex-1 flex-shrink-0 overflow-hidden">
       <UserAvatar />
     </div>
+		    <HoverButton :tooltip="$t('setting.contact')" @click="showContact = true">
+	      <span class="text-xl text-[#4f555e] dark:text-white">
+	        <SvgIcon icon="ri:simple-icons:wechat" />
+	      </span>
+	    </HoverButton>
     <HoverButton :tooltip="$t('common.logout')" @click="handleLogout">
       <span class="text-xl text-[#4f555e] dark:text-white">
         <SvgIcon icon="ri:logout-circle-r-line" />
@@ -57,5 +63,6 @@ function openAdminPanel() {
       </span>
     </HoverButton>
     <Setting v-if="show" v-model:visible="show" />
+	  <Contact v-if="show" v-model:visible="show" />
   </footer>
 </template>

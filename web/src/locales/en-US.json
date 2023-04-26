@@ -80,6 +80,7 @@
 		"scrollTop": "Scroll to top"
 	},
 	"setting": {
+		"contact": "Contact",
 		"setting": "Settings",
 		"general": "Overview",
 		"config": "Configuration",

@@ -110,6 +110,7 @@
 		"rateLimit10Min": "消息数量上限(10分钟)"
 	},
 	"setting": {
+		"contact": "联系我",
 		"setting": "设置",
 		"general": "总览",
 		"admin": "管理",
