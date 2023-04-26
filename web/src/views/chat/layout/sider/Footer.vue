@@ -13,6 +13,7 @@ const chatStore = useChatStore()
 const appStore = useAppStore()
 
 const show = ref(false)
+const showme = ref(false)
 
 const isAdminUser = computed(() => isAdmin(authStore.getToken() ?? ''))
 
@@ -37,7 +38,7 @@ function openAdminPanel() {
     <div class="flex-1 flex-shrink-0 overflow-hidden">
       <UserAvatar />
     </div>
-		<HoverButton :tooltip="$t('setting.contact')" @click="show = true">
+		<HoverButton :tooltip="$t('setting.contact')" @click="showme = true">
 			<span class="text-xl text-[#4f555e] dark:text-white">
 				<SvgIcon icon="simple-icons:wechat" />
 			</span>
@@ -63,6 +64,6 @@ function openAdminPanel() {
       </span>
     </HoverButton>
     <Setting v-if="show" v-model:visible="show" />
-	  <Contact v-if="show" v-model:visible="show" />
+	  <Contact v-if="showme" v-model:visible="showme" />
   </footer>
 </template>
