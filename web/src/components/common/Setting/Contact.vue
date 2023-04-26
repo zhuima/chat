@@ -1,8 +1,6 @@
 <script setup lang='ts'>
 import { computed, ref } from 'vue'
-import { NCard, NModal, NTabPane, NTabs } from 'naive-ui'
 import Wechat from './Wechat.vue'
-import Admin from './Admin.vue'
 import { SvgIcon } from '@/components/common'
 
 const props = defineProps<Props>()
@@ -27,8 +25,6 @@ const show = computed({
   },
 })
 
-// hidden
-const isAdminUser = ref<boolean>(false)
 </script>
 
 <template>
