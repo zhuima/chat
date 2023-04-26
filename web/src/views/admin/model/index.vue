@@ -25,6 +25,9 @@ onMounted(async () => {
   refreshData()
 })
 
+[{"ID":1,"Name":"gpt-3.5-turbo","Label":"gpt-3.5-turbo(chatgpt)","IsDefault":true,"Url":"https://api.openai.com/v1/chat/completions","ApiAuthHeader":"Authorization","ApiAuthKey":"OPENAI_API_KEY","UserID":1},{"ID":2,"Name":"claude-v1","Label":"claude-v1 (claude)","IsDefault":false,"Url":"https://api.anthropic.com/v1/complete","ApiAuthHeader":"x-api-key","ApiAuthKey":"CLAUDE_API_KEY","UserID":1},{"ID":3,"Name":"claude-instant-v1","Label":"claude-instant(small,fast)","IsDefault":false,"Url":"https://api.anthropic.com/v1/complete","ApiAuthHeader":"x-api-key","ApiAuthKey":"CLAUDE_API_KEY","UserID":1},{"ID":4,"Name":"gpt-4","Label":"gpt-4(chatgpt)","IsDefault":false,"Url":"https://api.openai.com/v1/chat/completions","ApiAuthHeader":"Authorization","ApiAuthKey":"OPENAI_API_KEY","UserID":1},{"ID":5,"Name":"gpt-4-32k","Label":"gpt-4-32k(chatgpt)","IsDefault":false,"Url":"https://api.openai.com/v1/chat/completions","ApiAuthHeader":"Authorization","ApiAuthKey":"OPENAI_API_KEY","UserID":1},{"ID":6,"Name":"echo","Label":"echo","IsDefault":false,"Url":"https://bestqa_workerd.bestqa.workers.dev/echo","ApiAuthHeader":"Authorization","ApiAuthKey":"ECHO_API_KEY","UserID":1},{"ID":7,"Name":"debug","Label":"debug","IsDefault":false,"Url":"https://bestqa_workerd.bestqa.workers.dev/debug","ApiAuthHeader":"Authorization","ApiAuthKey":"ECHO_API_KEY","UserID":1}]
+
+
 async function refreshData() {
   data.value = await fetchChatModel()
 }

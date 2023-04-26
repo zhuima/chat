@@ -13,6 +13,6 @@ test('test', async ({ page }) => {
   await page.getByTestId('email').locator('input').fill(test_email);
   await page.getByTestId('password').locator('input').click();
   await page.getByTestId('password').locator('input').fill('@ThisIsATestPass5');
-  await page.getByTestId('signup').click();
+  // await page.getByTestId('signup').click();
 });
 

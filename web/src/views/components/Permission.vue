@@ -122,13 +122,13 @@ async function handleSignup() {
         </header>
         <NInput v-model:value="user_email" data-testid="email" type="text" :minlength="6"
           :placeholder="$t('common.email_placeholder')" />
-        <NInput v-model:value="user_password" data-testid="password" type="text" :minlength="6"
+        <NInput v-model:value="user_password" data-testid="password" type="password" :minlength="6"
           :placeholder="$t('common.password_placeholder')" />
         <div class="flex justify-between">
-          <NButton type="primary" data-testid="signup" :disabled="user_pass_not_filled" :loading="loading"
+          <!-- <NButton type="primary" data-testid="signup" :disabled="user_pass_not_filled" :loading="loading"
             @click="handleSignup">
             {{ $t('common.signup') }}
-          </NButton>
+          </NButton> -->
           <NButton type="primary" data-testid="login" :disabled="user_pass_not_filled" :loading="loading"
             @click="handleLogin">
             {{ $t('common.login') }}
