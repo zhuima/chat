@@ -37,11 +37,11 @@ async function handleAdd() {
     title: new_chat_text,
     uuid: uuidv4(),
     isEdit: false,
-    maxLength: 10,
+    maxLength: 6,
     temperature: 1,
     model: default_model.Name,
     topP: 1,
-    maxTokens: 512,
+    maxTokens: 2048,
     debug: false,
   })
 }

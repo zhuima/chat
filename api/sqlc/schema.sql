@@ -27,12 +27,22 @@ ALTER TABLE chat_model ADD COLUMN IF NOT EXISTS user_id INTEGER NOT NULL default
 INSERT INTO chat_model(name, label, is_default, url, api_auth_header, api_auth_key)
 VALUES  ('gpt-3.5-turbo', 'gpt-3.5-turbo(chatgpt)', true, 'https://api.openai.com/v1/chat/completions', 'Authorization', 'OPENAI_API_KEY'),
         ('claude-v1', 'claude-v1 (claude)', false, 'https://api.anthropic.com/v1/complete', 'x-api-key', 'CLAUDE_API_KEY'),
-        ('claude-instant-v1', 'claude-instant(small,fast)', false, 'https://api.anthropic.com/v1/complete', 'x-api-key', 'CLAUDE_API_KEY'),
-        ('gpt-4', 'gpt-4(chatgpt)', false, 'https://api.openai.com/v1/chat/completions', 'Authorization', 'OPENAI_API_KEY'),
-        ('gpt-4-32k', 'gpt-4-32k(chatgpt)', false, 'https://api.openai.com/v1/chat/completions', 'Authorization', 'OPENAI_API_KEY'),
-        ('echo','echo',false,'https://bestqa_workerd.bestqa.workers.dev/echo','Authorization','ECHO_API_KEY'),
-        ('debug','debug',false,'https://bestqa_workerd.bestqa.workers.dev/debug','Authorization','ECHO_API_KEY')
+        ('claude-instant-v1', 'claude-instant(small,fast)', false, 'https://api.anthropic.com/v1/complete', 'x-api-key', 'CLAUDE_API_KEY')
 ON CONFLICT(name) DO NOTHING;
+
+
+
+-- INSERT INTO chat_model(name, label, is_default, url, api_auth_header, api_auth_key)
+-- VALUES  ('gpt-3.5-turbo', 'gpt-3.5-turbo(chatgpt)', true, 'https://api.openai.com/v1/chat/completions', 'Authorization', 'OPENAI_API_KEY'),
+--         ('claude-v1', 'claude-v1 (claude)', false, 'https://api.anthropic.com/v1/complete', 'x-api-key', 'CLAUDE_API_KEY'),
+--         ('claude-instant-v1', 'claude-instant(small,fast)', false, 'https://api.anthropic.com/v1/complete', 'x-api-key', 'CLAUDE_API_KEY'),
+--         ('gpt-4', 'gpt-4(chatgpt)', false, 'https://api.openai.com/v1/chat/completions', 'Authorization', 'OPENAI_API_KEY'),
+--         ('gpt-4-32k', 'gpt-4-32k(chatgpt)', false, 'https://api.openai.com/v1/chat/completions', 'Authorization', 'OPENAI_API_KEY'),
+--         ('echo','echo',false,'https://bestqa_workerd.bestqa.workers.dev/echo','Authorization','ECHO_API_KEY'),
+--         ('debug','debug',false,'https://bestqa_workerd.bestqa.workers.dev/debug','Authorization','ECHO_API_KEY')
+-- ON CONFLICT(name) DO NOTHING;
+
+
 
 -- create index on name
 CREATE INDEX IF NOT EXISTS jwt_secrets_name_idx ON jwt_secrets (name);

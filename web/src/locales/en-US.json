@@ -129,7 +129,7 @@
 		}
 	},
 	"error": {
-		"rateLimit": "发送消息数量已经达到上限, 请关注公众号《消息数量上限》,发送你的邮箱地址，获取额外使用次数.",
+		"rateLimit": "发送消息数量已经达到上限, 请关注公众号《掘金高效率工具计划》,发送你的邮箱地址，获取额外使用次数.",
 		"token_length_exceed_limit": "Total message length exceeds limit, please reduce context quantity, message length or start a new conversation.",
 		"invalidEmail": "Invalid email address",
 		"syncChatSession": "Sync Failed, Please Try Again Later",

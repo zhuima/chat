@@ -26,9 +26,9 @@ interface ModelType {
 
 const modelRef: Ref<ModelType> = ref({
   chatModel: session.value?.model ?? 'gpt-3.5-turbo',
-  contextCount: session.value?.maxLength ?? 10,
+  contextCount: session.value?.maxLength ?? 6,
   temperature: session.value?.temperature ?? 1.0,
-  maxTokens: session.value?.maxTokens ?? 512,
+  maxTokens: session.value?.maxTokens ?? 2048,
   topP: session.value?.topP ?? 1.0,
   debug: session.value?.debug ?? false,
 })
