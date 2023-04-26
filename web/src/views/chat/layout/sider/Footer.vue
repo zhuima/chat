@@ -37,7 +37,7 @@ function openAdminPanel() {
     <div class="flex-1 flex-shrink-0 overflow-hidden">
       <UserAvatar />
     </div>
-		    <HoverButton :tooltip="$t('setting.contact')" @click="showContact = true">
+		    <HoverButton :tooltip="$t('setting.contact')" @click="show = true">
 	      <span class="text-xl text-[#4f555e] dark:text-white">
 	        <SvgIcon icon="ri:simple-icons:wechat" />
 	      </span>
