@@ -1,7 +1,7 @@
 <script setup lang='ts'>
 import { computed, ref } from 'vue'
 import { NButton, NInput, NModal, useMessage } from 'naive-ui'
-import { fetchLogin, fetchSignUp } from '@/api'
+import { fetchLogin } from '@/api'
 import { t } from '@/locales'
 import { useAuthStore } from '@/store'
 import Icon403 from '@/icons/403.vue'
@@ -62,42 +62,42 @@ async function handleLogin() {
   }
 }
 
-async function handleSignup() {
-  const user_email_v = user_email.value.trim()
-  const user_password_v = user_password.value.trim()
+// async function handleSignup() {
+//   const user_email_v = user_email.value.trim()
+//   const user_password_v = user_password.value.trim()
 
-  if (!user_email_v || !user_password_v)
-    return
+//   if (!user_email_v || !user_password_v)
+//     return
 
-  if (!user_email_v || !user_password_v)
-    return
+//   if (!user_email_v || !user_password_v)
+//     return
 
-  // check user_email_v  is valid email
-  if (!user_email_v.match(/^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/)) {
-    ms.error(t('error.invalidEmail'))
-    return
-  }
-  // check password is length >=6 and include a number, a lowercase letter, an uppercase letter, and a special character
-  if (!user_password_v.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{6,}$/)) {
-    ms.error(t('error.invalidPassword'))
-    return
-  }
-  loading.value = true
-  try {
-    const { accessToken, expiresIn } = await fetchSignUp(user_email_v, user_password_v)
-    authStore.setToken(accessToken)
-    authStore.setExpiresIn(expiresIn)
-    ms.success('success')
-    window.location.reload()
-  }
-  catch (error: any) {
-    ms.error(error.message ?? 'error')
-    authStore.removeToken()
-  }
-  finally {
-    loading.value = false
-  }
-}
+//   // check user_email_v  is valid email
+//   if (!user_email_v.match(/^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/)) {
+//     ms.error(t('error.invalidEmail'))
+//     return
+//   }
+//   // check password is length >=6 and include a number, a lowercase letter, an uppercase letter, and a special character
+//   if (!user_password_v.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{6,}$/)) {
+//     ms.error(t('error.invalidPassword'))
+//     return
+//   }
+//   loading.value = true
+//   try {
+//     const { accessToken, expiresIn } = await fetchSignUp(user_email_v, user_password_v)
+//     authStore.setToken(accessToken)
+//     authStore.setExpiresIn(expiresIn)
+//     ms.success('success')
+//     window.location.reload()
+//   }
+//   catch (error: any) {
+//     ms.error(error.message ?? 'error')
+//     authStore.removeToken()
+//   }
+//   finally {
+//     loading.value = false
+//   }
+// }
 
 // function handlePress(event: KeyboardEvent) {
 //   if (event.key === 'Enter' && !event.shiftKey) {
