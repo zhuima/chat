@@ -83,7 +83,7 @@ export const useChatStore = defineStore('chat-store', {
           temperature: 1,
           model: 'gpt-3.5-turbo',
           topP: 1,
-          maxTokens: 512,
+          maxTokens: 2048,
           debug: false,
         })
       }
