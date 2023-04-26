@@ -34,7 +34,7 @@ const show = computed({
         <NTabPane name="General" tab="General">
           <template #tab>
             <SvgIcon class="text-lg" icon="ri:file-user-line" />
-            <span class="ml-2">{{ $t('setting.general') }}</span>
+            <span class="ml-2">{{ $t('setting.contact') }}</span>
           </template>
           <div class="min-h-[100px]">
             <Wechat />
