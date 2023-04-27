@@ -1,24 +1,19 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
 import { NButton, useMessage } from 'naive-ui'
-import type { Theme } from '@/store/modules/app/helper'
-import { useAppStore, useUserStore } from '@/store'
+import { useUserStore } from '@/store'
 import type { UserInfo } from '@/store/modules/user/helper'
 import { t } from '@/locales'
 
-const appStore = useAppStore()
 const userStore = useUserStore()
 
 const ms = useMessage()
-
 
 const userInfo = computed(() => userStore.userInfo)
 
 const name = ref(userInfo.value.name ?? '')
 
 const description = ref(userInfo.value.description ?? '')
-
-
 
 function updateUserInfo(options: Partial<UserInfo>) {
   userStore.updateUserInfo(options)
