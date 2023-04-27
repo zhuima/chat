@@ -11,7 +11,6 @@ const userStore = useUserStore()
 
 const ms = useMessage()
 
-const theme = computed(() => appStore.theme)
 
 const userInfo = computed(() => userStore.userInfo)
 
@@ -19,23 +18,7 @@ const name = ref(userInfo.value.name ?? '')
 
 const description = ref(userInfo.value.description ?? '')
 
-const themeOptions: { label: string; key: Theme; icon: string }[] = [
-  {
-    label: 'Auto',
-    key: 'auto',
-    icon: 'ri:contrast-line',
-  },
-  {
-    label: 'Light',
-    key: 'light',
-    icon: 'ri:sun-foggy-line',
-  },
-  {
-    label: 'Dark',
-    key: 'dark',
-    icon: 'ri:moon-foggy-line',
-  },
-]
+
 
 function updateUserInfo(options: Partial<UserInfo>) {
   userStore.updateUserInfo(options)
