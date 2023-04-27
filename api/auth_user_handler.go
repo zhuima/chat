@@ -25,7 +25,7 @@ func NewAuthUserHandler(service *AuthUserService) *AuthUserHandler {
 func (h *AuthUserHandler) Register(router *mux.Router) {
 	router.HandleFunc("/users", h.GetUserByID).Methods(http.MethodGet)
 	router.HandleFunc("/users/{id}", h.UpdateSelf).Methods(http.MethodPut)
-	router.HandleFunc("/signup", h.SignUp).Methods(http.MethodPost)
+	// router.HandleFunc("/signup", h.SignUp).Methods(http.MethodPost)
 	router.HandleFunc("/login", h.Login).Methods(http.MethodPost)
 	router.HandleFunc("/config", h.configHandler).Methods(http.MethodPost)
 	// admin
