@@ -20,7 +20,7 @@
 		"signup": "Sign up",
 		"email_placeholder": "Please enter your email",
 		"password_placeholder": "Please enter your password",
-		"unauthorizedTips": "Please login, default limit 100 second session",
+		"unauthorizedTips": "default limit 100 second session",
 		"loginSuccess": "Login Successful",
 		"logout_success": "Logout Successful",
 		"signup_success": "Registration Successful",
