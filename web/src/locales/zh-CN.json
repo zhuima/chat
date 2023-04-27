@@ -20,7 +20,7 @@
 		"signup": "注册",
 		"email_placeholder": "请输入邮箱",
 		"password_placeholder": "请输入密码",
-		"unauthorizedTips": "默认赠送100次请求, 更多请求请私信",
+		"unauthorizedTips": "欢迎使用，更多服务请私信留言",
 		"loginSuccess": "登录成功",
 		"logout_success": "登出成功",
 		"signup_success": "注册成功",

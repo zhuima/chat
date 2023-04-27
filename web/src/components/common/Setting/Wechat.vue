@@ -26,8 +26,8 @@ function updateUserInfo(options: Partial<UserInfo>) {
     <div class="space-y-6">
       <div class="p-4 space-y-5 min-h-[200px]">
         <img src="../../../icons/wechat.jpg" alt="404" class="w-64 h-64">
-        <p>关注公众号，发送邮箱地址获取更多体验次数</p>
-        <p>或微信搜索《掘金高效率工具计划》</p>
+        <p>关注公众号，发送邮箱地址获取体验天数</p>
+        <p>或微信搜索《掘金高效率工具计划》私信留言</p>
       </div>
       <div class="flex items-center space-x-4">
         <span class="flex-shrink-0 w-[100px]" />
